@@ -5,5 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './post-create.component.html'
 })
 export class PostCreateComponent {
-
+  afteraddPost: String = '';
+  onaddPost() {
+    this.afteraddPost = 'Post successfully added';
+  }
 }

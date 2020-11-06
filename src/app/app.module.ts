@@ -1,3 +1,4 @@
+import { PostListComponent } from './posts/post-create/post-list/post-list.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -9,6 +10,7 @@ import {PostCreateComponent} from './posts/post-create/post-create.component';
   declarations: [
     AppComponent,
     PostCreateComponent,
+    PostListComponent,
     HeaderComponent
   ],
   imports: [
