@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {image, lorem, name, date} from 'faker';
 @Component({
   selector: 'app-post-list',
@@ -6,11 +6,14 @@ import {image, lorem, name, date} from 'faker';
 })
 export class PostListComponent {
 
-  posts = [
-    {title: lorem.word(), authorImg: image.avatar(),author: name.firstName() + ' ' + name.lastName(), authorProfile: '@' + name.firstName().toLowerCase() + name.lastName().toLowerCase(), content: lorem.sentences(), time: date.recent()},
-    {title: lorem.word(), authorImg: image.avatar(),author: name.firstName() + ' ' + name.lastName(), authorProfile: '@' + name.firstName().toLowerCase() + name.lastName().toLowerCase(), content: lorem.sentences(), time: date.recent()},
-    {title: lorem.word(), authorImg: image.avatar(),author: name.firstName() + ' ' + name.lastName(), authorProfile: '@' + name.firstName().toLowerCase() + name.lastName().toLowerCase(), content: lorem.sentences(), time: date.recent()},
-    {title: lorem.word(), authorImg: image.avatar(),author: name.firstName() + ' ' + name.lastName(), authorProfile: '@' + name.firstName().toLowerCase() + name.lastName().toLowerCase(), content: lorem.sentences(), time: date.recent()},
-    {title: lorem.word(), authorImg: image.avatar(),author: name.firstName() + ' ' + name.lastName(), authorProfile: '@' + name.firstName().toLowerCase() + name.lastName().toLowerCase(), content: lorem.sentences(), time: date.recent()},
-  ]
+
+  // posts = [
+  //   {title: lorem.word(), authorImg: image.avatar(),author: name.firstName() + ' ' + name.lastName(), authorProfile: '@' + name.firstName().toLowerCase() + name.lastName().toLowerCase(), content: lorem.sentences(), time: date.recent()},
+  //   {title: lorem.word(), authorImg: image.avatar(),author: name.firstName() + ' ' + name.lastName(), authorProfile: '@' + name.firstName().toLowerCase() + name.lastName().toLowerCase(), content: lorem.sentences(), time: date.recent()},
+  //   {title: lorem.word(), authorImg: image.avatar(),author: name.firstName() + ' ' + name.lastName(), authorProfile: '@' + name.firstName().toLowerCase() + name.lastName().toLowerCase(), content: lorem.sentences(), time: date.recent()},
+  //   {title: lorem.word(), authorImg: image.avatar(),author: name.firstName() + ' ' + name.lastName(), authorProfile: '@' + name.firstName().toLowerCase() + name.lastName().toLowerCase(), content: lorem.sentences(), time: date.recent()},
+  //   {title: lorem.word(), authorImg: image.avatar(),author: name.firstName() + ' ' + name.lastName(), authorProfile: '@' + name.firstName().toLowerCase() + name.lastName().toLowerCase(), content: lorem.sentences(), time: date.recent()},
+  // ];
+
+  @Input() posts = [];
 }
