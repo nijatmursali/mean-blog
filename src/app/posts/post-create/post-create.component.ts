@@ -5,9 +5,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
   templateUrl: './post-create.component.html'
 })
 export class PostCreateComponent {
-  enteredTitle = "";
-  enteredContent = "";
-  afteraddPost: String = '';
+  enteredTitle: string = "";
+  enteredContent: string = "";
+  afteraddPost: string = '';
 
   @Output() postCreated = new EventEmitter();
 
